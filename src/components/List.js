@@ -1,13 +1,19 @@
 import React from "react";
 
-function List({ emoji, title, todoCount }) {
+function List({ emoji, title, todoCount, listID, opened }) {
+    function openList(list) {
+        return null
+    }
+
     return (
-        <li>
-            <div>
-                <span>{ emoji }</span>
-                <span>{ title }</span>
-            </div>
-            { todoCount }
+        <li className="List" id={opened ? "CurrentList" : ""}>
+            <button onClick={openList(listID)}>
+                <div>
+                    <span id="ListEmoji">{ emoji }</span>
+                    <span id="ListTitle">{ title }</span>
+                </div>
+                <span id="ListCount">{ todoCount }</span>
+            </button>
         </li>
     )
 }
