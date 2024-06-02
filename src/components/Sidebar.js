@@ -1,9 +1,14 @@
 import React from "react";
+import User from './User';
+import LineDivisor from './LineDivisor';
+import Panel from './Panel';
 
-function Sidebar({ children }) {
+function Sidebar() {
     return (
         <aside className="Sidebar">
-            { children }
+            <User name={"Murilo"} photo={""}/>
+            <LineDivisor />
+            <Panel />
         </aside>
     )
 }

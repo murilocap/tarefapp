@@ -8,7 +8,8 @@
   --surface-color: #F1F1F1;
   --shadow-color: #1A1A1A2B;
   --current-list-color: #EFEFEFC0;
-  --text-color: #202020
+  --text-color: #202020;
+  --profile-photo-square-size: 25px;
 }
 
 * {
@@ -45,9 +46,25 @@ body {
   user-select: none;
 }
 
+.User {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+
+.UserPhoto {
+  display: block;
+  width: var(--profile-photo-square-size) !important;
+  height: var(--profile-photo-square-size) !important;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 .LineDivisor {
   width: 100%;  height: 1px;
-  border-bottom: 1px dashed;
+  border-bottom: 1px dashed var(--text-color);
 /*   
   background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0) 0%);
   background-position: bottom;
@@ -61,41 +78,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.Actions {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 10px;
-}
-
-.Buttons {
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1em;
-  background-color: transparent;
-  transition: all .3s ease;
-}
-
-/*
-=== FAZER DEPOIS COM CALMA!!! ===
-.Buttons:hover{
-  border: none;
-  transform: scale(103%);
-}
-*/
-
-.PrimaryButton {
-  padding: 12px !important;
-  color: var(--on-primary-color);
-  font-weight: 600;
-  background-color: var(--primary-color);
-}
-
-.SecondaryButton {
-  color: var(--primary-color);
-  border: 1px dashed var(--primary-color);
 }
 
 .Lists {
@@ -154,8 +136,40 @@ body {
   opacity: .7;
 }
 
+.Actions {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
 
+.Buttons {
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: transparent;
+  transition: all .3s ease;
+}
 
+/*
+=== FAZER DEPOIS COM CALMA!!! ===
+.Buttons:hover{
+  border: none;
+  transform: scale(103%);
+}
+*/
+
+.PrimaryButton {
+  color: var(--on-primary-color);
+  font-weight: 600;
+  background-color: var(--primary-color);
+}
+
+.SecondaryButton {
+  padding: 8px !important;
+  color: var(--primary-color);
+  border: 1px dashed var(--text-color);
+}
 
 .Main {
   width: 100%;  height: 100%;
