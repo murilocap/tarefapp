@@ -1,25 +1,25 @@
 import './App.css';
-import Panel from './components/Panel';
+import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import User from './components/User';
-import Lists from './components/Lists';
-import Actions from './components/Actions';
+import LineDivisor from './components/LineDivisor';
+import Panel from './components/Panel';
 import Title from './components/Title';
 import Tasks from './components/Tasks';
 
 function App() {
     return (
-        <div className='App'>
-            <Panel>
+        <>
+            <Sidebar>
                 <User />
-                <Lists />
-                <Actions />
-            </Panel>
+                <LineDivisor />
+                <Panel />
+            </Sidebar>
             <Main>
                 <Title />
                 <Tasks />
             </Main>
-        </div>
+        </>
     );
 }
 

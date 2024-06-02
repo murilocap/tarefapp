@@ -1,10 +1,13 @@
 import React from "react";
+import Lists from "./Lists";
+import Actions from "./Actions";
 
-function Panel({ children }) {
+function Panel() {
     return (
-        <aside>
-            {children}
-        </aside>
+        <div className="Panel">
+            <Lists />
+            <Actions />
+        </div>
     )
 }
 
