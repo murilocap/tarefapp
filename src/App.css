@@ -6,10 +6,10 @@
   --primary-color: #1E1E1E;
   --on-primary-color: #F3F3F3;
   --surface-color: #F1F1F1;
-  --shadow-color: #1A1A1A2B;
+  --shadow-color: #1A1A1A0A;
   --current-list-color: #EFEFEFC0;
-  --text-color: #202020;
-  --profile-photo-square-size: 25px;
+  --text-color: #2B2B2B;
+  --profile-photo-square-size: 32px;
 }
 
 * {
@@ -37,7 +37,7 @@ body {
 
 .Sidebar {
   min-width: 200px;
-  max-width: 350px;
+  max-width: 300px;
   width: 30%; height: 100%;
   padding: 15px;
   display: flex;
@@ -46,7 +46,11 @@ body {
   user-select: none;
 }
 
-.User {
+#User {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -54,12 +58,34 @@ body {
   gap: 10px;
 }
 
-.UserPhoto {
-  display: block;
+.UserProfile {
+  border-radius: 50%;
   width: var(--profile-photo-square-size) !important;
   height: var(--profile-photo-square-size) !important;
-  border-radius: 50%;
+}
+
+#UserPhoto {
+  display: block;
   overflow: hidden;
+}
+
+#UserPlaceholder {
+  border: .5px solid #00000020;
+  background: #E04C46 linear-gradient(160deg, rgba(217,22,113,1) 0%, rgba(231,130,27,1) 90%) border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#UserPlaceholder span {
+  color: #FFFFFFEF;
+  font-size: 1.15em;
+  font-weight: 700;
+  text-align: center;
+}
+
+#User label {
+  font-size: 1.2em;
 }
 
 .LineDivisor {
@@ -70,7 +96,7 @@ body {
   background-position: bottom;
   background-size: 15px 1px;
   background-repeat: repeat-x;
-  */
+*/
 }
 
 .Panel {
@@ -88,14 +114,14 @@ body {
 }
 
 .List {
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
 .List > button {
   cursor: pointer;
-  padding: 7px;
-  padding-right: 12px;
+  padding: 8px;
+  padding-right: 14px;
   width: 100%;
   background-color: transparent;
   display: flex;
@@ -174,5 +200,5 @@ body {
 .Main {
   width: 100%;  height: 100%;
   background-color: var(--surface-color);
-  box-shadow: -3px 0 10px var(--shadow-color);
+  box-shadow: -3px 0 5px var(--shadow-color);
 }

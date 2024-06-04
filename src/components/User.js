@@ -1,17 +1,34 @@
 import React from "react";
 
 function User({ name, photo }) {
+    function openUser() {
+        return
+    }
+
+    function profilePhotoLoader() {
+        if ( photo ) {
+            return `background-image: url(` + photo + `)`
+        } else {
+            `opacity: 1`
+        }
+    }
+
     return (
-        <div className="User">
-            <div className={!photo ? "UserPhoto" : "UserPhotoTemplate"}>
+        <button id="User" onClick={openUser()}>
+            <div
+            className="UserProfile"
+            id={ photo ? "UserPhoto" : "UserPlaceholder" }
+            style={ profilePhotoLoader() }
+            // style={ photo ? `background-image: url(` + photo + `)` : `` }
+            >
                 {
-                    photo ?
-                    "" :
-                    name.charAt(0)
+                    !photo ?
+                    <span>{name.charAt(0)}</span>
+                    : ""
                 }
             </div>
-            <p>Olá, <strong className="UserName">{name}</strong></p>
-        </div>
+            <label>Olá, <strong className="UserName">{name}</strong></label>
+        </button>
     )
 }
 
