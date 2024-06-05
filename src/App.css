@@ -51,6 +51,7 @@ body {
   border-radius: 10px;
   padding: 5px;
   background-color: transparent;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -60,8 +61,12 @@ body {
 
 .UserProfile {
   border-radius: 50%;
-  width: var(--profile-photo-square-size) !important;
-  height: var(--profile-photo-square-size) !important;
+  min-width: var(--profile-photo-square-size)   !important;
+  width: var(--profile-photo-square-size)       !important;
+  max-width: var(--profile-photo-square-size)   !important;
+  min-height: var(--profile-photo-square-size)  !important;
+  height: var(--profile-photo-square-size)      !important;
+  max-height: var(--profile-photo-square-size)  !important;
 }
 
 #UserPhoto {
@@ -86,6 +91,8 @@ body {
 
 #User label {
   font-size: 1.2em;
+  text-align: left;
+  text-wrap: nowrap;
 }
 
 .LineDivisor {
