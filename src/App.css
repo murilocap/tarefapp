@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
 
 :root {
-  --background-color: #D7D7D7;
+  --background-color: #D5D5D5;
   --primary-color: #1E1E1E;
   --on-primary-color: #F3F3F3;
   --surface-color: #F1F1F1;
@@ -47,9 +47,10 @@ body {
 }
 
 #User {
-  cursor: pointer;
+  /* cursor: pointer; */
+  border: solid 1px transparent;
   border-radius: 10px;
-  padding: 5px;
+  padding: 8px;
   background-color: transparent;
   overflow: hidden;
   display: flex;
@@ -57,7 +58,18 @@ body {
   justify-content: left;
   align-items: center;
   gap: 10px;
+  transition: all .2s ease-in-out;
 }
+
+/* #User:hover {
+  border: solid 1px var(--shadow-color);
+  background-color: var(--shadow-color);
+  box-shadow: 0 3px 7px #7A7A7A2A;
+  transform: translateY(-2px);
+}
+#User:active {
+  transform: scale(90%);
+} */
 
 .UserProfile {
   border-radius: 50%;
@@ -98,12 +110,6 @@ body {
 .LineDivisor {
   width: 100%;  height: 1px;
   border-bottom: 1px dashed var(--text-color);
-/*   
-  background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0) 0%);
-  background-position: bottom;
-  background-size: 15px 1px;
-  background-repeat: repeat-x;
-*/
 }
 
 .Panel {
@@ -121,8 +127,20 @@ body {
 }
 
 .List {
+  border: solid 1px transparent;
   border-radius: 12px;
   overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.List:hover {
+  border: solid 1px var(--shadow-color);
+  background-color: var(--shadow-color);
+  box-shadow: 0 3px 7px #7A7A7A2A;
+  transform: translateY(-2px);
+}
+.List:active {
+  transform: scale(90%);
 }
 
 .List > button {
@@ -177,6 +195,7 @@ body {
 
 .Buttons {
   cursor: pointer;
+  border: 1px solid transparent;
   padding: 12px;
   border-radius: 10px;
   font-size: 1em;
@@ -184,13 +203,16 @@ body {
   transition: all .3s ease;
 }
 
-/*
-=== FAZER DEPOIS COM CALMA!!! ===
 .Buttons:hover{
-  border: none;
-  transform: scale(103%);
+  color: var(--text-color);
+  border: solid 1px var(--shadow-color);
+  background-color: var(--shadow-color);
+  box-shadow: 0 3px 7px #7A7A7A2A;
+  /* transform: translateY(-2px); */
 }
-*/
+.Buttons:active {
+  transform: scale(90%);
+}
 
 .PrimaryButton {
   color: var(--on-primary-color);
@@ -199,7 +221,7 @@ body {
 }
 
 .SecondaryButton {
-  padding: 8px !important;
+  padding: 10px !important;
   color: var(--primary-color);
   border: 1px dashed var(--text-color);
 }
