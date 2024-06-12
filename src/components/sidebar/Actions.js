@@ -13,8 +13,8 @@ function Actions() {
 
     return (
         <div className="Actions">
-            <PrimaryButton label={"Nova Tarefa"} onClick={newTask()}/>
             <SecondaryButton label={"Nova Lista"} onClick={newList()}/>
+            <PrimaryButton label={"Nova Tarefa"} onClick={newTask()}/>
         </div>
     )
 }

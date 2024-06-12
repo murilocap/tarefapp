@@ -9,10 +9,10 @@ function List({ emoji, title, todoCount, listID, opened }) {
         <li className="List" id={opened ? "CurrentList" : ""}>
             <button onClick={openList(listID)}>
                 <div>
-                    <span id="ListEmoji">{ emoji }</span>
-                    <span id="ListTitle">{ title }</span>
+                    <span className="ListEmoji">{ emoji }</span>
+                    <span className="ListTitle">{ title }</span>
                 </div>
-                <span id="ListCount">{ todoCount }</span>
+                <span className="ListCount">{ todoCount }</span>
             </button>
         </li>
     )
