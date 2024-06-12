@@ -12,6 +12,20 @@
   --profile-photo-square-size: 32px;
 }
 
+
+/* DARK THEME */
+/* :root {
+  --background-color: #171717;
+  --primary-color: #F3F3F3;
+  --on-primary-color: #1E1E1E;
+  --surface-color: #202020;
+  --shadow-color: #0000000A;
+  --current-list-color: #303030C0;
+  --text-color: #F0F0F0;
+  --profile-photo-square-size: 32px;
+} */
+
+
 * {
   margin: 0;
   outline: none;
@@ -190,7 +204,7 @@ body {
 .Actions {
   display: flex;
   flex-direction: column-reverse;
-  gap: 10px;
+  gap: 15px;
 }
 
 .Buttons {
@@ -207,8 +221,8 @@ body {
   color: var(--text-color);
   border: solid 1px var(--shadow-color);
   background-color: var(--shadow-color);
-  box-shadow: 0 3px 7px #7A7A7A2A;
-  /* transform: translateY(-2px); */
+  box-shadow: 0 3px 7px #4A4A4A4A;
+  transform: translateY(-2px);
 }
 .Buttons:active {
   transform: scale(90%);
