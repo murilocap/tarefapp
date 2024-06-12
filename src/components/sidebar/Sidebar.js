@@ -1,5 +1,5 @@
 import React from "react";
-import User from './User';
+import User from "./User";
 import LineDivisor from './LineDivisor';
 import Panel from './Panel';
 

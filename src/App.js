@@ -1,8 +1,8 @@
 import './App.css';
-import Sidebar from './components/Sidebar';
-import Main from './components/Main';
-import Title from './components/Title';
-import Tasks from './components/Tasks';
+import Sidebar from './components/sidebar/Sidebar';
+import Main from './components/main/Main';
+import Title from './components/main/Title';
+import Tasks from './components/main/Tasks';
 
 function App() {
     return (

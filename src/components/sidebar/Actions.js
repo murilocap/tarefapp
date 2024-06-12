@@ -1,6 +1,6 @@
 import React from "react";
-import PrimaryButton from "./PrimaryButton.js"
-import SecondaryButton from "./SecondaryButton.js"
+import PrimaryButton from "../PrimaryButton.js"
+import SecondaryButton from "../SecondaryButton.js"
 
 
 function Actions() {
