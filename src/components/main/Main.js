@@ -1,9 +1,14 @@
 import React from 'react'
+import Title from './Title'
+import Tasks from './Tasks'
 
-function Main({ children }) {
+const listEmoji = "🔥"
+const listTitle = "Para Hoje"
+
+function Main() {
     return (
         <main className='Main'>
-            {children}
+            <Title listEmoji={ listEmoji } listTitle={ listTitle } />
         </main>
     )
 }

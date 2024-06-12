@@ -1,11 +1,11 @@
 import React from "react";
 
-function Tasks({ children }) {
+function Task({ children }) {
     return (
-        <ul id="Tasks">
+        <ul className="Task">
             {children}
         </ul>
     )
 }
 
-export default Tasks
+export default Task
