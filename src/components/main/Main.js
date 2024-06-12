@@ -9,6 +9,7 @@ function Main() {
     return (
         <main className='Main'>
             <Title listEmoji={ listEmoji } listTitle={ listTitle } />
+            <Tasks />
         </main>
     )
 }

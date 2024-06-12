@@ -1,9 +1,10 @@
 import React from "react";
+import Task from "./Task";
 
-function Tasks({ children }) {
+function Tasks() {
     return (
         <ul id="Tasks">
-            {children}
+            <Task finished={false} desc={"Exemplo de tarefa a fazer."}/>
         </ul>
     )
 }

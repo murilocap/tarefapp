@@ -1,10 +1,18 @@
 import React from "react";
+import CheckButton from "./CheckButton"
 
-function Task({ children }) {
+function Task({ finished, desc, date, reminder }) {
     return (
-        <ul className="Task">
-            {children}
-        </ul>
+        <li className="Task">
+            <span className="TaskDesc">
+                <CheckButton checked={ finished } />
+                <p>{ desc }</p>
+            </span>
+
+            <span className="TaskChips">
+
+            </span>
+        </li>
     )
 }
 
