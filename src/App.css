@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
 
+:root {
+  --check-button-size: 24px;
+  --profile-photo-square-size: 34px;
+}
+
 /* LIGHT THEME */
 :root {
   --background-color: #D5D5D5;
@@ -15,7 +20,6 @@
   --on-sucess-color: #11795f;
   --error-color: #FBBBAD;
   --on-error-color: #A03821;
-  --profile-photo-square-size: 32px;
 }
 
 /* DARK THEME */
@@ -32,7 +36,6 @@
   --on-sucess-color: #a0dbcd;
   --error-color: #672719;
   --on-error-color: #ff9c86;
-  --profile-photo-square-size: 32px;
 } */
 
 
@@ -60,8 +63,8 @@ body {
 }
 
 .Sidebar {
-  min-width: 200px;
-  max-width: 300px;
+  min-width: 250px;
+  max-width: 370px;
   width: 30%; height: 100%;
   padding: 15px;
   display: flex;
@@ -120,13 +123,13 @@ body {
 
 #UserPlaceholder span {
   color: #FFFFFFEF;
-  font-size: 1.15em;
+  font-size: 1.2em;
   font-weight: 700;
   text-align: center;
 }
 
 #User label {
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-align: left;
   text-wrap: nowrap;
 }
@@ -316,18 +319,52 @@ body {
 }
 
 #Tasks {
-  padding: 20px 40px;
+  padding: 20px 60px;
   list-style: none;
   display: flex;
   flex-direction: column;
 }
 
-#Tasks .Task {
+.Task {
   padding: 15px;
   border-radius: 15px;
   background-color: var(--task-color);
 }
 
-.Task .TaskDesc {
+.TaskDesc {
+  font-size: 1.2em;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+}
+
+.CheckButton {
+  cursor: pointer;
+  border: 1px dashed var(--text-color);
+  border-radius: 10em;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease-in-out;
+  min-width: var(--check-button-size);  max-width: var(--check-button-size);
+  min-height: var(--check-button-size);  max-height: var(--check-button-size);
+}
+.CheckButton:is(:hover, :focus) {
+  transform: translateY(-2px);
+}
+.CheckButton:focus {
+  transform: scale(95%);
+}
+
+.CheckButtonDone {
+  border: 2px solid var(--on-sucess-color);
+}
+
+.CheckButtonDone ion-icon {
+  color: var(--on-sucess-color); 
+  --ionicon-stroke-width: 64px;
 }

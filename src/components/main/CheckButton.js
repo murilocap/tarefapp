@@ -6,7 +6,13 @@ function CheckButton({ checked }) {
             checked
             ? "CheckButton CheckButtonDone"
             : "CheckButton CheckButtonUndone" 
-        }></button>
+        }>
+            {
+                checked
+                ? <ion-icon name="checkmark-outline"></ion-icon>
+                : ""
+            }
+        </button>
     )
 }
 
